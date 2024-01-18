@@ -1,2 +1,4 @@
 /.ipynb_checkpoints/
 /dataset/
+/cleaned_dataset/
+/bad_records_log/
