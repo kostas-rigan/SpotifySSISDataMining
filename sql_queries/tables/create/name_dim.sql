@@ -1,0 +1,20 @@
+USE [spotify]
+GO
+
+/****** Object:  Table [dbo].[name_dim]    Script Date: 31/1/2024 11:14:10 πμ ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[name_dim](
+	[name_id] [int] IDENTITY(1,1) NOT NULL,
+	[name_label] [varchar](350) NOT NULL,
+ CONSTRAINT [PK_name_dim] PRIMARY KEY CLUSTERED 
+(
+	[name_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
