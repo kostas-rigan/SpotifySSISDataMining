@@ -1,7 +1,7 @@
 ﻿USE [spotify]
 GO
 
-/****** Object:  Table [dbo].[album_dim]    Script Date: 31/1/2024 11:08:30 πμ ******/
+/****** Object:  Table [dbo].[album_dim]    Script Date: 15/2/2024 6:35:50 μμ ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,7 +12,6 @@ CREATE TABLE [dbo].[album_dim](
 	[album_id] [int] IDENTITY(1,1) NOT NULL,
 	[album_name] [varchar](305) NOT NULL,
 	[album_type] [int] NOT NULL,
-	[release_date] [date] NOT NULL,
 	[album_popularity] [bigint] NOT NULL,
 	[record_label] [int] NOT NULL,
  CONSTRAINT [PK_album_dim] PRIMARY KEY CLUSTERED 

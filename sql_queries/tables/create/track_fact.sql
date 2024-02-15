@@ -1,7 +1,7 @@
 USE [spotify]
 GO
 
-/****** Object:  Table [dbo].[track_fact]    Script Date: 31/1/2024 11:15:00 πμ ******/
+/****** Object:  Table [dbo].[track_fact]    Script Date: 15/2/2024 6:39:48 μμ ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,6 +12,8 @@ CREATE TABLE [dbo].[track_fact](
 	[track_id] [int] IDENTITY(1,1) NOT NULL,
 	[name] [int] NOT NULL,
 	[album] [int] NOT NULL,
+	[artist] [int] NOT NULL,
+	[release_date] [date] NOT NULL,
 	[explicit] [int] NOT NULL,
 	[key] [int] NOT NULL,
 	[mode] [int] NOT NULL,
@@ -38,6 +40,13 @@ REFERENCES [dbo].[album_dim] ([album_id])
 GO
 
 ALTER TABLE [dbo].[track_fact] CHECK CONSTRAINT [FK_track_fact_album_dim]
+GO
+
+ALTER TABLE [dbo].[track_fact]  WITH CHECK ADD  CONSTRAINT [FK_track_fact_artist_dim] FOREIGN KEY([artist])
+REFERENCES [dbo].[artist_dim] ([artist_id])
+GO
+
+ALTER TABLE [dbo].[track_fact] CHECK CONSTRAINT [FK_track_fact_artist_dim]
 GO
 
 ALTER TABLE [dbo].[track_fact]  WITH CHECK ADD  CONSTRAINT [FK_track_fact_explicit_dim] FOREIGN KEY([explicit])

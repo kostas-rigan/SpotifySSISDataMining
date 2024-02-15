@@ -1,7 +1,7 @@
 USE [spotify]
 GO
 
-/****** Object:  Table [dbo].[mode_dim]    Script Date: 31/1/2024 11:14:00 πμ ******/
+/****** Object:  Table [dbo].[mode_dim]    Script Date: 15/2/2024 6:39:01 μμ ******/
 SET ANSI_NULLS ON
 GO
 

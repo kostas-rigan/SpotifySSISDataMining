@@ -1,7 +1,7 @@
 USE [spotify]
 GO
 
-/****** Object:  Table [dbo].[genre_dim]    Script Date: 31/1/2024 11:13:26 πμ ******/
+/****** Object:  Table [dbo].[genre_dim]    Script Date: 15/2/2024 6:37:53 μμ ******/
 SET ANSI_NULLS ON
 GO
 
@@ -10,7 +10,7 @@ GO
 
 CREATE TABLE [dbo].[genre_dim](
 	[genre_id] [int] IDENTITY(1,1) NOT NULL,
-	[genre_name] [varchar](50) NULL,
+	[genre_name] [varchar](50) NOT NULL,
  CONSTRAINT [PK_genre_dim] PRIMARY KEY CLUSTERED 
 (
 	[genre_id] ASC
