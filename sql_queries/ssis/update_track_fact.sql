@@ -1,11 +1,13 @@
 INSERT INTO track_fact
 SELECT DISTINCT
-      nd.[name_id]
-	  ,alb.new_id
-	  ,[explicit]
+      nd.name_id
+	  ,aid.[new_id] as album
+	  ,arid.new_id as artist
+	  ,[release_date]
+      ,[explicit]
 	  ,[key]
 	  ,[mode]
-      ,[track_popularity]
+	  ,[track_popularity]
       ,[danceability]
       ,[energy]
       ,[loudness]
@@ -16,6 +18,7 @@ SELECT DISTINCT
       ,[valence]
       ,[tempo]
       ,[duration_s]
-  FROM [spotify].[dbo].[tracks_condensed] as td
-INNER JOIN name_dim as nd ON td.track_name = nd.name_label
-INNER JOIN album_ids AS alb ON alb.old_id = td.album_id;
+  FROM [spotify].[dbo].[tracks_condensed] as tc
+  INNER JOIN name_dim as nd ON tc.track_name = nd.name_label
+  INNER JOIN album_ids as aid ON tc.album_id = aid.old_id
+  INNER JOIN artist_ids as arid ON tc.artist_id = arid.old_id;

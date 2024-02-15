@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SpotifySSIS</Name>
-    <LastWriteTime>2024-01-31T09:02:52.6655354Z</LastWriteTime>
+    <LastWriteTime>2024-02-14T09:13:38.2125555Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SpotifyDataImport.dtsx</Name>
-      <LastWriteTime>2024-01-31T09:02:47.8215837Z</LastWriteTime>
+      <LastWriteTime>2024-02-14T09:13:36.7680476Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

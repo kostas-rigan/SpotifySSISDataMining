@@ -1,3 +1,3 @@
 INSERT INTO [dbo].[genre_dim] (genre_name)
-SELECT DISTINCT genre
-FROM [dbo].[artist_genre]
+SELECT DISTINCT genre_0
+FROM [dbo].[artist]
